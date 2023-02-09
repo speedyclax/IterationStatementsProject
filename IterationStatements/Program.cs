@@ -6,80 +6,39 @@ namespace IterationStatements
     class Program
     {
         static void Main(string[] args)
-        {
-                for (int i = 0; i < 5; i++)
+        {            
+            var numbers = new List<int>();
+
+            int num = 0;
+
+            do
             {
-                console.writeline($"{i}");
+                num++;
+
+                numbers.Add(num);
+
+            } while (num < 100);
+          
+            while (num < 200) 
+            {
+                num++;
+
+                numbers.Add(num);
             }
 
-                for (int i = 0; i < 5; i++)
+            Console.WriteLine("Increase:");
+
+            foreach(var item in numbers)
             {
-                console.writeline($"{i}");
+                Console.WriteLine(item);
             }
 
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
+            Console.WriteLine("");
+            Console.WriteLine("Decrease:");
 
-                for (int i = 0; i < 5; i++)
+            for(var i = 199; i <= numbers.Count && i >= 0; i--)
             {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
-            }
-
-                for (int i = 0; i < 5; i++)
-            {
-                console.writeline($"{i}");
+                Console.Write(numbers[i]);
             }
         }
     }
